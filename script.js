@@ -25,9 +25,9 @@ $(".time-block").each(function(){
 //local storage of data inputed by user
 $(".saveBtn").on("click",function(){
   var userInput=$(this).siblings(".description").val();
-  var timeBlock=$(this).parent().attr("id");
+  var timeSlot=$(this).parent().attr("id");
 
-  localStorage.setItem(timeBlock, JSON.stringify(userInput))
+  localStorage.setItem(timeSlot, JSON.stringify(userInput))
 });
 
 $("#hour-0 .description").val(JSON.parse(localStorage.getItem("hour-0")));
